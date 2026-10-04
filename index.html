@@ -1,6 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
@@ -12,374 +11,515 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-KZSFKTVX');</script>
   <!-- End Google Tag Manager -->
-  <meta name=viewport content=“width=800”>
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-  <style type="text/css">
-    /* Color scheme stolen from Sergey Karayev */
-
-    a {
-      color: #1772d0;
-      text-decoration: none;
-    }
-
-    a:focus,
-    a:hover {
-      color: #f09228;
-      text-decoration: none;
-    }
-
-    body,
-    td,
-    th,
-    tr,
-    p,
-    a {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px
-    }
-
-    strong {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px;
-    }
-
-    heading {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 22px;
-    }
-
-    papertitle {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px;
-      font-weight: 700
-    }
-
-    name {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 32px;
-    }
-
-    .one {
-      width: 160px;
-      height: 160px;
-      position: relative;
-    }
-
-    .two {
-      width: 160px;
-      height: 160px;
-      position: absolute;
-      transition: opacity .2s ease-in-out;
-      -moz-transition: opacity .2s ease-in-out;
-      -webkit-transition: opacity .2s ease-in-out;
-    }
-
-    .fade {
-      transition: opacity .2s ease-in-out;
-      -moz-transition: opacity .2s ease-in-out;
-      -webkit-transition: opacity .2s ease-in-out;
-    }
-
-    .holder {
-      display: inline;
-    }
-
-    .holder img {
-      max-height: 200px;
-      max-width: 200px;
-      object-fit: cover;
-    }
-
-    span.highlight {
-      background-color: #ffffd0;
-    }
-  </style>
-  <link rel="icon" type="image/png" href="seal_icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Hao Wang</title>
-  <meta name="description"
-    content="Hao Wang - Ph.D. student at Texas A&M University and Senior Research Engineer at Google DeepMind. Research interests in LLM/VLM Post-Training, Embodied AI, and AI Safety.">
-  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet'
-    type='text/css'>
-</head>
+  <meta name="description" content="Hao Wang is a Ph.D. student at Texas A&amp;M University and a Senior Research Engineer at Google DeepMind, working on agentic RL and post-training, continual learning, AI alignment, robot learning, and world models.">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hao Wang">
+  <meta property="og:description" content="Hao Wang is a Ph.D. student at Texas A&amp;M University and a Senior Research Engineer at Google DeepMind, working on agentic RL and post-training, continual learning, AI alignment, robot learning, and world models.">
+  <meta property="og:url" content="https://haohww.github.io/">
+  <meta property="og:image" content="https://haohww.github.io/assets/media/profile.jpg">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="canonical" href="https://haohww.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one 860px column; publications are a media | text grid, media column 232px, stacking under 640px. */
+:root {
+  --bg: #fbfbfc;
+  --surface: #f1f3f6;
+  --fg: #15181d;
+  --muted: #5b6270;
+  --soft: #6b7280;
+  --hair: #e3e6eb;
+  --accent: #1d5bd6;
+  --accent-soft: #e8effc;
+  --figure: #ffffff;
+  --display: "Bricolage Grotesque", "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --body: "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1014; --surface: #171a20; --fg: #e7e9ee; --muted: #a0a7b3; --soft: #7f8693;
+    --hair: #252a33; --accent: #82abff; --accent-soft: #18223a; --figure: #f4f5f7; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1014; --surface: #171a20; --fg: #e7e9ee; --muted: #a0a7b3; --soft: #7f8693;
+  --hair: #252a33; --accent: #82abff; --accent-soft: #18223a; --figure: #f4f5f7; color-scheme: dark;
+}
 
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--body); font-size: 15.5px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  padding-inline: 20px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+.wrap { max-width: 860px; margin: 0 auto; }
+
+/* nav */
+.nav {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--hair);
+  margin-inline: -20px; padding-inline: 20px;
+}
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 52px; }
+.nav__brand { font-family: var(--display); font-weight: 600; font-size: 16px; color: var(--fg); letter-spacing: -0.01em; }
+.nav__links { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; font-size: 14px; }
+.nav__links a { color: var(--muted); }
+.nav__links a:hover { color: var(--fg); text-decoration: none; }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 168px; gap: 40px; align-items: start; padding-block: 56px 40px; }
+.hero h1 {
+  font-family: var(--display); font-weight: 600; font-size: clamp(38px, 6vw, 52px);
+  letter-spacing: -0.03em; line-height: 1; margin: 0 0 22px; text-wrap: balance;
+}
+.hero p { margin: 0 0 12px; max-width: 62ch; }
+.hero__photo { width: 168px; aspect-ratio: 1; border-radius: 14px; object-fit: cover; display: block; background: var(--surface); }
+.interests { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; padding: 0; list-style: none; }
+.interests li { font-size: 13px; padding: 4px 11px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 500; }
+.links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; margin-top: 22px; font-size: 14px; }
+.links a, .links button { display: inline-flex; align-items: center; gap: 7px; color: var(--fg); font-weight: 500; }
+.links svg { width: 16px; height: 16px; fill: currentColor; color: var(--muted); }
+.links a:hover svg { color: var(--accent); }
+.links .email { font-family: var(--mono); font-size: 13px; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; }
+.links .email:hover { color: var(--fg); }
+.links .email small { font-family: var(--body); font-size: 12px; color: var(--soft); }
+
+/* sections */
+section { padding-block: 36px; border-top: 1px solid var(--hair); }
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 22px; }
+h2 { font-family: var(--display); font-weight: 600; font-size: 24px; letter-spacing: -0.02em; margin: 0; }
+.note { font-size: 13px; color: var(--soft); }
+
+/* news */
+.news { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.news li { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; }
+.news time { font-family: var(--mono); font-size: 13px; color: var(--soft); padding-top: 2px; font-variant-numeric: tabular-nums; }
+.badge { font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--accent); }
+
+/* filter */
+.filter { display: flex; gap: 6px; flex-wrap: wrap; }
+.filter button {
+  font: 500 13px var(--body); color: var(--muted); background: transparent;
+  border: 1px solid var(--hair); border-radius: 999px; padding: 5px 12px; cursor: pointer;
+}
+.filter button:hover { color: var(--fg); border-color: var(--soft); }
+.filter button[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+
+/* publications */
+.year { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; color: var(--soft); margin: 26px 0 4px; }
+.year:first-of-type { margin-top: 0; }
+.pub { display: grid; grid-template-columns: 232px minmax(0, 1fr); gap: 24px; padding-block: 18px; align-items: start; }
+.pub + .pub { border-top: 1px dashed var(--hair); }
+.pub.no-rule { border-top: 0; }
+.pub.is-lead { background: var(--accent-soft); border-radius: 14px; padding: 18px; margin-inline: -18px; border-top: 0; }
+.pub.is-lead + .pub { border-top: 0; }
+.pub.is-lead { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.pub.is-lead .pub__media { aspect-ratio: 8 / 3; }
+.pub.is-lead h3 { font-size: 19px; }
+.cmp {
+  position: absolute; top: 8px; font: 500 11px var(--mono); letter-spacing: 0.04em;
+  color: #fff; padding: 3px 8px; border-radius: 5px; white-space: nowrap;
+}
+.cmp--bad { left: 8px; background: rgba(176, 38, 32, .88); }
+.cmp--good { left: calc(50% + 8px); background: rgba(28, 120, 58, .9); }
+.pub__media {
+  position: relative; display: block; width: 100%; max-width: 100%; aspect-ratio: 16 / 10;
+  border-radius: 10px; overflow: hidden; background: var(--figure);
+  box-shadow: 0 0 0 1px var(--hair);
+}
+.pub__media video, .pub__media img {
+  width: 100%; height: 100%; display: block; object-fit: cover;
+  transition: transform .6s cubic-bezier(.2,.7,.2,1);
+}
+.pub__media.fit img { object-fit: contain; padding: 8px; }
+.pub__media:hover video, .pub__media:hover img { transform: scale(1.035); }
+.pub__venue { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 0 0 6px; }
+.venue { font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--accent); }
+.pub h3 { font-family: var(--display); font-weight: 600; font-size: 17px; line-height: 1.32; letter-spacing: -0.01em; margin: 0 0 6px; text-wrap: balance; }
+.pub h3 a { color: var(--fg); }
+.pub h3 a:hover { color: var(--accent); text-decoration: none; }
+.authors { font-size: 14px; color: var(--muted); margin: 0 0 6px; }
+.authors b { color: var(--fg); font-weight: 600; }
+.tldr { font-size: 14px; margin: 0 0 8px; color: var(--fg); }
+.plinks { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.plinks a {
+  font: 500 12px var(--mono); color: var(--fg); border: 1px solid var(--hair);
+  border-radius: 6px; padding: 2px 9px; background: var(--bg);
+}
+.plinks a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.arxiv { font-family: var(--mono); font-size: 12px; color: var(--soft); }
+
+/* timeline */
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.cols > div { min-width: 0; }
+h4 { font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--soft); margin: 0 0 14px; }
+.tl { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.tl li { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 14px; align-items: start; }
+.tl li > div { display: grid; gap: 1px; min-width: 0; }
+.logo {
+  width: 32px; height: 32px; border-radius: 8px; background: #fff; object-fit: contain;
+  padding: 3px; box-shadow: 0 0 0 1px var(--hair); margin-top: 2px;
+}
+.logo--fill { padding: 0; }
+.tl .org { font-weight: 600; }
+.tl .what { color: var(--muted); font-size: 14px; }
+.tl .sub { display: block; font-size: 13px; color: var(--soft); }
+.tl .date { font-family: var(--mono); font-size: 12px; color: var(--soft); font-variant-numeric: tabular-nums; }
+
+.plain { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+.plain li::marker { color: var(--soft); }
+
+footer { border-top: 1px solid var(--hair); padding-block: 28px 48px; font-size: 13px; color: var(--soft); display: grid; justify-items: center; gap: 14px; text-align: center; }
+footer a { color: var(--muted); }
+.visitor-map { width: 300px; max-width: 100%; min-height: 150px; }
+.visitor-map img, .visitor-map canvas { max-width: 100%; }
+
+@media (max-width: 680px) {
+  .nav__links { gap: 14px; font-size: 13px; }
+  .nav__links li:nth-child(n+4) { display: none; }
+  .hero { grid-template-columns: 1fr; gap: 24px; padding-block: 36px 28px; }
+  .hero__photo { width: 112px; order: -1; }
+  .pub { grid-template-columns: 1fr; gap: 14px; }
+  .cmp__more { display: none; }
+  .cols { grid-template-columns: 1fr; gap: 28px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+</style>
+<style>body { margin: 0; } img { max-width: 100%; } [hidden] { display: none !important; }</style>
+</head>
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZSFKTVX" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
-    <tr>
-      <td>
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td width="67%" valign="middle">
-              <p align="center">
-                <name>Hao Wang</name>
-                <br>
-                <a href="mailto:haohw[at]tamu.edu">haohw &ltat&gt tamu.edu</a>
-              </p>
-              <p>
-                I am a Ph.D. student in TAMU advised by <a href="https://zhiwenfan.github.io/">Prof. Zhiwen Fan</a>,
-                and a <span class="job-title">Senior Research Engineer at Google DeepMind, Gemini Post Training & Safety
-                  Alignment</span>.
-              </p>
-              <p>
-                Previously, I obtained my M.Sc. from Carnegie Mellon University and B.Sc. from University of Edinburgh,
-                where I was
-                advised by <a href="https://homepages.inf.ed.ac.uk/hbilen/">Prof. Hakan Bilen</a>.
-              </p>
-              <p>
-                My research interests center on LLM/VLM Post-Training, Embodied AI, and AI Safety.
-              </p>
-              <p align=center>
-                <a href="https://scholar.google.com/citations?hl=en&user=BRXayYwAAAAJ">Google Scholar</a>
-              </p>
-            </td>
-            <td width="50%">
-              <div class='holder'>
-                <img src="assets/images/profile.jpeg" alt="Hao Wang">
-              </div>
-            </td>
-          </tr>
-        </table>
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a class="nav__brand" href="#top">Hao Wang</a>
+    <ul class="nav__links">
+      <li><a href="#news">News</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#service">Service</a></li>
+    </ul>
+  </div>
+</nav>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td>
-              <heading>Education</heading>
-            </td>
-          </tr>
-        </table>
-        <table width="100%" align="center" border="0" cellpadding="20">
-          <tr>
-            <td width="90%" valign="center">
-              <p>
-                Ph.D. Computer Engineering, <papertitle>Texas A&M University</papertitle>, 2026-Now
-                <br>
-                <br>
-                M.Sc. Computer Science, <papertitle>Carnegie Mellon University</papertitle>, 2021-2022
-                <br>
-                <br>
-                B.Sc. Artificial Intelligence and Computer Science (First-Class Honours), <papertitle>University of
-                  Edinburgh
-                </papertitle>, 2017-2020
-                <br>
-                <br>
-              </p>
-            </td>
-          </tr>
-        </table>
+<main class="wrap" id="top">
+  <header class="hero">
+    <div>
+      <h1>Hao Wang</h1>
+      <p>I am a Ph.D. student at Texas A&amp;M University advised by <a href="https://zhiwenfan.github.io/">Prof. Zhiwen Fan</a>, and a Senior Research Engineer at <a href="https://deepmind.google/">Google DeepMind</a> working on Gemini post-training and safety alignment.</p>
+      <p>Previously, I received my M.Sc. from Carnegie Mellon University and my B.Sc. from the University of Edinburgh, where I was advised by <a href="https://homepages.inf.ed.ac.uk/hbilen/">Prof. Hakan Bilen</a>.</p>
+      <ul class="interests" aria-label="Research interests">
+        <li>Agentic RL &amp; post-training</li>
+        <li>Continual learning</li>
+        <li>AI alignment</li>
+        <li>Robot learning</li>
+        <li>World models</li>
+      </ul>
+      <div class="links">
+        <a href="https://scholar.google.com/citations?hl=en&amp;user=BRXayYwAAAAJ">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm-7 9.18v4L12 20l7-3.82v-4L12 16l-7-3.82Z"/></svg>Google Scholar</a>
+        <a href="https://github.com/haohww">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>GitHub</a>
+        <a href="https://www.linkedin.com/in/hao-wang-612232136">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>LinkedIn</a>
+        <button class="email" id="copy-email" type="button" title="Copy email address">haohw [at] tamu.edu <small id="copy-state" aria-live="polite">copy</small></button>
+      </div>
+    </div>
+    <img class="hero__photo" src="assets/media/profile.jpg" alt="Portrait of Hao Wang">
+  </header>
 
+  <section id="news">
+    <div class="section-head"><h2>News</h2></div>
+    <ul class="news">
+      <li><time>2026</time><div><a href="https://arxiv.org/abs/2602.06232">RuleSmith</a> accepted to <span class="badge">NeurIPS 2026</span>.</div></li>
+      <li><time>2026</time><div><a href="https://behavior-uncloning.github.io/">Behavior Uncloning</a> accepted to <span class="badge">CoRL 2026</span>.</div></li>
+      <li><time>2026</time><div><a href="https://arxiv.org/abs/2604.07650">How Independent are Large Language Models?</a> accepted to <span class="badge">COLM 2026</span>.</div></li>
+      <li><time>2026</time><div><a href="https://lean-gate.github.io/">LeanGate</a> accepted to <span class="badge">IROS 2026</span>.</div></li>
+    </ul>
+  </section>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td>
-              <heading>Professional Experience</heading>
-            </td>
-          </tr>
-        </table>
-        <table width="100%" align="center" border="0" cellpadding="20">
-          <tr>
-            <td width="90%" valign="center">
-              <p>
-                Senior Research Engineer, <papertitle>Google DeepMind</papertitle>, 2022 - Now
-                <br>
-                <br>
-                Machine Learning Engineer Intern, <papertitle>ByteDance</papertitle>, 2020.12 - 2021.7
-                <br>
-                <br>
-                Research Assistant, Visual Computing Group (VICO), <papertitle>University of Edinburgh</papertitle>,
-                2019.6 - 2020.5
-                <br>
-                <br>
-              </p>
-            </td>
-          </tr>
-        </table>
+  <section id="publications">
+    <div class="section-head">
+      <h2>Publications</h2>
+      <div class="filter" role="group" aria-label="Filter by topic">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="embodied" aria-pressed="false">Embodied AI</button>
+        <button type="button" data-filter="llm" aria-pressed="false">LLMs &amp; agents</button>
+      </div>
+    </div>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td width="100%" valign="middle">
-              <heading>Publications</heading>
-            </td>
-          </tr>
-        </table>
+    <div id="pub-list">
+      <div class="year" data-year="2026">2026</div>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td valign="top" width="95%">
-              (*indicates equal contribution)
-            </td>
-          </tr>
-        </table>
+      <article class="pub is-lead" data-topic="embodied" data-year="2026">
+        <a class="pub__media" href="https://behavior-uncloning.github.io/" aria-label="Behavior Uncloning project page">
+          <video src="assets/media/behavior-uncloning.mp4" poster="assets/media/behavior-uncloning.jpg" muted loop playsinline preload="metadata"></video>
+          <span class="cmp cmp--bad">BEFORE<span class="cmp__more"> · original policy</span></span>
+          <span class="cmp cmp--good">AFTER<span class="cmp__more"> · uncloned with MoRE</span></span>
+        </a>
+        <div>
+          <p class="pub__venue"><span class="venue">CoRL 2026</span></p>
+          <h3><a href="https://arxiv.org/abs/2606.29201">Behavior Uncloning: Distilling Mode Redirection into Policy Weights without Inference-Time Steering</a></h3>
+          <p class="authors"><b>Hao Wang</b>, Jiuzhou Lei, Dayou Li, Bangya Liu, Minghui Zheng, Manling Li, Ruohan Zhang, Zhiwen Fan</p>
+          <p class="tldr">MoRE removes unwanted behavior modes from behavior-cloned policies, such as handing over a knife blade-first, with a short uncloning step and zero inference-time overhead.</p>
+          <ul class="plinks">
+            <li><a href="https://arxiv.org/pdf/2606.29201">paper</a></li>
+            <li><a href="https://behavior-uncloning.github.io/">project</a></li>
+            <li><a href="https://github.com/phai-lab/behavior-uncloning">code</a></li>
+          </ul>
+        </div>
+      </article>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td valign="top" width="95%">
-              <a href="https://arxiv.org/abs/2606.29201">
-                <papertitle>Behavior Uncloning: Distilling Mode Redirection into Policy Weights without Inference-Time Steering</papertitle>
-              </a>
-              <br>
-              H Wang, J Lei, D Li, B Liu, M Zheng, M Li, R Zhang, Z Fan
-              <br>
-              <em>arXiv preprint, 2026</em>
-              <br>
-              <a href="https://arxiv.org/pdf/2606.29201">paper</a> &nbsp/&nbsp
-              <a href="https://behavior-uncloning.github.io/">project page</a> &nbsp/&nbsp
-              <a href="https://github.com/phai-lab/behavior-uncloning">code</a>
-            </td>
-          </tr>
-        </table>
+      <article class="pub" data-topic="llm" data-year="2026">
+        <a class="pub__media" href="https://arxiv.org/abs/2602.06232" aria-label="RuleSmith paper">
+          <img src="assets/media/rulesmith.jpg" alt="RuleSmith illustration: two LLM agents playing a civilization game over a balance scale" loading="lazy">
+        </a>
+        <div>
+          <p class="pub__venue"><span class="venue">NeurIPS 2026</span></p>
+          <h3><a href="https://arxiv.org/abs/2602.06232">RuleSmith: Multi-Agent LLMs for Automated Game Balancing</a></h3>
+          <p class="authors">Ziyao Zeng, <b>Hao Wang</b>, Chen Liu, Tianyu Liu, Xiatao Sun, Fengyu Yang, Xiaofeng Liu, Zhiwen Fan</p>
+          <p class="tldr">Couples multi-agent LLM self-play with Bayesian optimization over a game's rule space to balance a civilization-style game automatically.</p>
+          <ul class="plinks">
+            <li><a href="https://arxiv.org/pdf/2602.06232">paper</a></li>
+          </ul>
+        </div>
+      </article>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td valign="top" width="95%">
-              <a href="https://arxiv.org/abs/2602.06232">
-                <papertitle>RuleSmith: Multi-Agent LLMs for Automated Game Balancing</papertitle>
-              </a>
-              <br>
-              Z Zeng, Hao Wang, C Liu, T Liu, X Sun, F Yang, X Liu, Z Fan
-              <br>
-              <em>arXiv preprint, 2026</em>
-              <br>
-              <a href="https://arxiv.org/pdf/2602.06232">paper</a>
-            </td>
-          </tr>
-        </table>
+      <article class="pub" data-topic="llm" data-year="2026">
+        <a class="pub__media fit" href="https://arxiv.org/abs/2604.07650" aria-label="How Independent are Large Language Models? paper">
+          <img src="assets/media/llm-judges.jpg" alt="Overview figure: behavioral entanglement among LLMs and verifier reweighting" loading="lazy">
+        </a>
+        <div>
+          <p class="pub__venue"><span class="venue">COLM 2026</span></p>
+          <h3><a href="https://arxiv.org/abs/2604.07650">How Independent are Large Language Models? A Statistical Framework for Auditing Behavioral Entanglement and Reweighting Verifier Ensembles</a></h3>
+          <p class="authors">Chenchen Kuai, Jiwan Jiang, Zihao Zhu, <b>Hao Wang</b>, Keshu Wu, Zihao Li, Yunlong Zhang, Chenxi Liu, Zhengzhong Tu, Zhiwen Fan, Yang Zhou</p>
+          <p class="tldr">Audits hidden behavioral entanglement among black-box LLMs and reweights verifier ensembles that wrongly assume their judges fail independently.</p>
+          <ul class="plinks">
+            <li><a href="https://arxiv.org/pdf/2604.07650">paper</a></li>
+          </ul>
+        </div>
+      </article>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td valign="top" width="95%">
-              <a href="https://arxiv.org/abs/2604.08718">
-                <papertitle>LeanGate: Accelerating Transformer-Based Monocular SLAM via Geometric Utility Scoring</papertitle>
-              </a>
-              <br>
-              Xinmiao Xiong, Bangya Liu, Hao Wang, Dayou Li, Nuo Chen, Andrew Feng, Mingyu Ding, Suman Banerjee, Yang Zhou, Zhiwen Fan
-              <br>
-              <em>IROS 2026</em>
-              <br>
-              <a href="https://arxiv.org/pdf/2604.08718">paper</a> &nbsp/&nbsp
-              <a href="https://xinmiaoshawn.github.io/LeanGate/">project page</a>
-            </td>
-          </tr>
-        </table>
+      <article class="pub" data-topic="embodied" data-year="2026">
+        <a class="pub__media" href="https://lean-gate.github.io/" aria-label="LeanGate project page">
+          <video src="assets/media/leangate.mp4" poster="assets/media/leangate.jpg" muted loop playsinline preload="metadata"></video>
+        </a>
+        <div>
+          <p class="pub__venue"><span class="venue">IROS 2026</span></p>
+          <h3><a href="https://arxiv.org/abs/2604.08718">Accelerating Transformer-Based Monocular SLAM via Geometric Utility Scoring</a></h3>
+          <p class="authors">Xinmiao Xiong, Bangya Liu, <b>Hao Wang</b>, Dayou Li, Nuo Chen, Andrew Feng, Mingyu Ding, Suman Banerjee, Yang Zhou, Zhiwen Fan</p>
+          <p class="tldr">LeanGate scores each frame's geometric utility before heavy foundation-model decoding, skipping over 90% of redundant frames in monocular SLAM.</p>
+          <ul class="plinks">
+            <li><a href="https://arxiv.org/pdf/2604.08718">paper</a></li>
+            <li><a href="https://lean-gate.github.io/">project</a></li>
+          </ul>
+        </div>
+      </article>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td valign="top" width="95%">
-              <a href="https://arxiv.org/abs/2510.23691">
-                <papertitle>Game-TARS: Pretrained Foundation Models for Scalable Generalist Multimodal Game Agents</papertitle>
-              </a>
+      <article class="pub" data-topic="embodied" data-year="2026">
+        <a class="pub__media" href="https://dream2fix.github.io/" aria-label="Dream2Fix project page">
+          <video src="assets/media/dream2fix.mp4" poster="assets/media/dream2fix.jpg" muted loop playsinline preload="metadata"></video>
+        </a>
+        <div>
+          <p class="pub__venue"><span class="venue">arXiv 2026</span><span class="arxiv">2603.13528</span></p>
+          <h3><a href="https://arxiv.org/abs/2603.13528">Learning Actionable Manipulation Recovery via Counterfactual Failure Synthesis</a></h3>
+          <p class="authors">Dayou Li, Jiuzhou Lei, <b>Hao Wang</b>, Lulin Liu, Yunhao Yang, Zihan Wang, Bangya Liu, Minghui Zheng, Zhiwen Fan</p>
+          <p class="tldr">Dream2Fix synthesizes photorealistic failures from successful demonstrations with a generative world model, producing 120K+ paired samples for learning executable recovery.</p>
+          <ul class="plinks">
+            <li><a href="https://arxiv.org/pdf/2603.13528">paper</a></li>
+            <li><a href="https://dream2fix.github.io/">project</a></li>
+          </ul>
+        </div>
+      </article>
 
-              <br>
-              <em>arXiv preprint, 2025</em>
-              <br>
-              <a href="https://arxiv.org/pdf/2510.23691">paper</a>
-            </td>
-          </tr>
-        </table>
+      <div class="year" data-year="2025">2025</div>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td valign="top" width="95%">
-              <a href="https://arxiv.org/abs/2503.20527">
-                <papertitle>StableToolBench-MirrorAPI: Modeling Tool Environments as Mirrors of 7,000+ Real-World
-                  APIs</papertitle>
-              </a>
-              <br>
-              Z Guo, S Cheng, Y Niu, H Wang, S Zhou, W Huang, Y Liu
-              <br>
-              <em>ACL 2025</em>
-              <br>
-            </td>
-          </tr>
-        </table>
+      <article class="pub" data-topic="llm" data-year="2025">
+        <a class="pub__media fit" href="https://arxiv.org/abs/2503.20527" aria-label="MirrorAPI paper">
+          <img src="assets/media/mirrorapi.jpg" alt="MirrorAPI balances stability, scalability and realness of tool environments" loading="lazy">
+        </a>
+        <div>
+          <p class="pub__venue"><span class="venue">Findings of ACL 2025</span></p>
+          <h3><a href="https://arxiv.org/abs/2503.20527">StableToolBench-MirrorAPI: Modeling Tool Environments as Mirrors of 7,000+ Real-World APIs</a></h3>
+          <p class="authors">Zhicheng Guo, Sijie Cheng, Yuchen Niu, <b>Hao Wang</b>, Sicheng Zhou, Wenbing Huang, Yang Liu</p>
+          <p class="tldr">Fine-tunes LLMs to simulate responses from 7,000+ real APIs, giving tool-learning benchmarks an environment that is stable, scalable and realistic.</p>
+          <ul class="plinks">
+            <li><a href="https://arxiv.org/pdf/2503.20527">paper</a></li>
+          </ul>
+        </div>
+      </article>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td valign="top" width="95%">
-              <a href="https://arxiv.org/abs/2403.07714">
-                <papertitle>StableToolBench: Towards Stable Large-Scale Benchmarking on Tool Learning of Large
-                  Language Models</papertitle>
-              </a>
-              <br>
-              Z Guo, S Cheng, H Wang, S Liang, Y Qin, P Li, Z Liu, M Sun, Y Liu
-              <br>
-              <em>ACL 2024</em>
-              <br>
-              <a href="https://arxiv.org/pdf/2403.07714">paper</a> &nbsp/&nbsp
-              <a href="https://github.com/THUNLP-MT/StableToolBench">code</a>
-            </td>
-          </tr>
-        </table>
+      <div class="year" data-year="2024">2024</div>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td valign="top" width="95%">
-              <a href="https://arxiv.org/abs/2311.10751">
-                <papertitle>ProAgent: From Robotic Process Automation to Agentic Process Automation</papertitle>
-              </a>
-              <br>
-              Yining Ye, Xin Cong, Shizuo Tian, Jiannan Cao, Hao Wang, Yujia Qin, Yaxi Lu, Heyang Yu, Huadong
-              Wang, Yankai Lin, Zhiyuan Liu, Maosong Sun
-              <br>
-              <em>arXiv preprint, 2023</em>
-              <br>
-              <a href="https://arxiv.org/pdf/2311.10751">paper</a>
-            </td>
-          </tr>
-        </table>
+      <article class="pub" data-topic="llm" data-year="2024">
+        <a class="pub__media fit" href="https://github.com/THUNLP-MT/StableToolBench" aria-label="StableToolBench code">
+          <img src="assets/media/stabletoolbench.jpg" alt="StableToolBench virtual API server with caching system and API simulator" loading="lazy">
+        </a>
+        <div>
+          <p class="pub__venue"><span class="venue">Findings of ACL 2024</span></p>
+          <h3><a href="https://arxiv.org/abs/2403.07714">StableToolBench: Towards Stable Large-Scale Benchmarking on Tool Learning of Large Language Models</a></h3>
+          <p class="authors">Zhicheng Guo, Sijie Cheng, <b>Hao Wang</b>, Shihao Liang, Yujia Qin, Peng Li, Zhiyuan Liu, Maosong Sun, Yang Liu</p>
+          <p class="tldr">A virtual API server with caching and API simulators, plus solvable pass and win rates, for stable large-scale evaluation of tool use.</p>
+          <ul class="plinks">
+            <li><a href="https://arxiv.org/pdf/2403.07714">paper</a></li>
+            <li><a href="https://github.com/THUNLP-MT/StableToolBench">code</a></li>
+          </ul>
+        </div>
+      </article>
 
+      <div class="year" data-year="2023">2023</div>
 
-              <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                <tr>
-                  <td>
-                    <heading>Awards and Professional Service</heading>
-                  </td>
-                </tr>
-              </table>
-              <table width="100%" align="center" border="0" cellpadding="20">
-                <tr>
-                  <td width="95%" valign="center">
-                    <p><strong>Awards</strong></p>
-                    <ul>
-                      <li>University of Edinburgh Class Medal (Undergraduate student with highest GPA)</li>
-                      <li>Carnegie Mellon University Director's Scholarship</li>
-                      <li>Spiritus Prize for Health and Wellbeing</li>
-                    </ul>
-                    <p><strong>Teaching Assistant</strong></p>
-                    <ul>
-                      <li>Algorithms, Data Structures, Machine Learning, Software Engineering - The University of
-                        Edinburgh.</li>
-                      <li>17637 Web Application Development - Carnegie Mellon University.</li>
-                    </ul>
-                    <p><strong>Professional Service</strong>
-                    <ul>
-                      <li>Reviewer for ICLR, ACL, COLM, BMVC.</li>
-                    </ul>
+      <article class="pub" data-topic="llm" data-year="2023">
+        <a class="pub__media fit" href="https://github.com/OpenBMB/ProAgent" aria-label="ProAgent code">
+          <img src="assets/media/proagent.jpg" alt="Robotic process automation compared with agentic process automation" loading="lazy">
+        </a>
+        <div>
+          <p class="pub__venue"><span class="venue">arXiv 2023</span><span class="arxiv">2311.10751</span></p>
+          <h3><a href="https://arxiv.org/abs/2311.10751">ProAgent: From Robotic Process Automation to Agentic Process Automation</a></h3>
+          <p class="authors">Yining Ye, Xin Cong, Shizuo Tian, Jiannan Cao, <b>Hao Wang</b>, Yujia Qin, Yaxi Lu, Heyang Yu, Huadong Wang, Yankai Lin, Zhiyuan Liu, Maosong Sun</p>
+          <p class="tldr">Introduces Agentic Process Automation: an LLM agent that builds workflows from human instructions and coordinates specialized agents at run time.</p>
+          <ul class="plinks">
+            <li><a href="https://arxiv.org/pdf/2311.10751">paper</a></li>
+            <li><a href="https://github.com/OpenBMB/ProAgent">code</a></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
 
-                  </td>
-                </tr>
-              </table>
+  <section id="experience">
+    <div class="cols">
+      <div>
+        <h4>Education</h4>
+        <ul class="tl">
+          <li><img class="logo logo--fill" src="assets/logos/tamu.png" alt="" width="32" height="32"><div><span class="org">Texas A&amp;M University</span><span class="what">Ph.D. in Computer Engineering</span><span class="date">2026 – now</span></div></li>
+          <li><img class="logo logo--fill" src="assets/logos/cmu.png" alt="" width="32" height="32"><div><span class="org">Carnegie Mellon University</span><span class="what">M.Sc. in Computer Science</span><span class="date">2021 – 2022</span></div></li>
+          <li><img class="logo" src="assets/logos/edinburgh.png" alt="" width="32" height="32"><div><span class="org">University of Edinburgh</span><span class="what">B.Sc. Artificial Intelligence and Computer Science<span class="sub">First-Class Honours</span></span><span class="date">2017 – 2020</span></div></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Experience</h4>
+        <ul class="tl">
+          <li><img class="logo" src="assets/logos/gdm.svg" alt="" width="32" height="32"><div><span class="org">Google DeepMind</span><span class="what">Senior Research Engineer<span class="sub">Gemini Post-Training &amp; Safety Alignment</span></span><span class="date">2022 – now</span></div></li>
+          <li><img class="logo" src="assets/logos/bytedance.png" alt="" width="32" height="32"><div><span class="org">ByteDance</span><span class="what">Machine Learning Engineer Intern</span><span class="date">2020.12 – 2021.07</span></div></li>
+          <li><img class="logo" src="assets/logos/edinburgh.png" alt="" width="32" height="32"><div><span class="org">University of Edinburgh</span><span class="what">Research Assistant<span class="sub">Visual Computing Group (VICO)</span></span><span class="date">2019.06 – 2020.05</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-              <script type='text/javascript' id='mapmyvisitors'
-                src='https://mapmyvisitors.com/map.js?cl=c1c1c1&w=300&t=tt&d=28WvlrOgSpigWfX3RCo2pMGzYCUTtZ250DubBGhVKK8&co=ffffff&cmo=517c5a&cmn=1ca84a&ct=808080'></script>
-              <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                <tr>
-                  <td>
-                    <br>
-                    <p align="center">
-                      <font size="2" color="gray">The design of this website is inspired by <a
-                          href="https://jonbarron.info/"><strong>Jon
-                            Barron</strong></a>, last updated: 2026.4</font>
-                    </p>
-                  </td>
-                </tr>
-              </table>
-      </td>
-    </tr>
-  </table>
+  <section id="service">
+    <div class="cols">
+      <div>
+        <h4>Awards</h4>
+        <ul class="plain">
+          <li>University of Edinburgh Class Medal (highest GPA in the undergraduate cohort)</li>
+          <li>Carnegie Mellon University Director's Scholarship</li>
+          <li>Spiritus Prize for Health and Wellbeing</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Service &amp; Teaching</h4>
+        <ul class="plain">
+          <li>Reviewer: ICLR, ACL, COLM, BMVC</li>
+          <li>TA, University of Edinburgh: Algorithms, Data Structures, Machine Learning, Software Engineering</li>
+          <li>TA, Carnegie Mellon University: 17-637 Web Application Development</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+  <footer class="wrap">
+    <div class="visitor-map"><script type='text/javascript' id='mapmyvisitors'
+                src='https://mapmyvisitors.com/map.js?cl=c1c1c1&w=300&t=tt&d=28WvlrOgSpigWfX3RCo2pMGzYCUTtZ250DubBGhVKK8&co=ffffff&cmo=517c5a&cmn=1ca84a&ct=808080'></script></div>
+    <span>Design inspired by <a href="https://jonbarron.info/">Jon Barron</a> · Last updated October 2026</span>
+  </footer>
+
+<script>
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var videos = Array.prototype.slice.call(document.querySelectorAll('.pub__media video'));
+
+  function tryPlay(v) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+
+  if (reduce) {
+    // Poster only; play while hovered or focused.
+    videos.forEach(function (v) {
+      var box = v.parentElement;
+      box.addEventListener('mouseenter', function () { tryPlay(v); });
+      box.addEventListener('mouseleave', function () { v.pause(); });
+      box.addEventListener('focus', function () { tryPlay(v); });
+      box.addEventListener('blur', function () { v.pause(); });
+    });
+  } else if ('IntersectionObserver' in window) {
+    // Autoplay only while on screen, to save bandwidth and CPU.
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { e.isIntersecting ? tryPlay(e.target) : e.target.pause(); });
+    }, { rootMargin: '120px 0px' });
+    videos.forEach(function (v) { io.observe(v); });
+  } else {
+    videos.forEach(tryPlay);
+  }
+
+  // Topic filter
+  var buttons = document.querySelectorAll('.filter button');
+  var pubs = document.querySelectorAll('#pub-list .pub');
+  var years = document.querySelectorAll('#pub-list .year');
+  function apply(topic) {
+    pubs.forEach(function (p) { p.hidden = topic !== 'all' && p.dataset.topic !== topic; });
+    years.forEach(function (y) {
+      var any = document.querySelector('#pub-list .pub[data-year="' + y.dataset.year + '"]:not([hidden])');
+      y.hidden = !any;
+    });
+    // No divider above the first visible paper of each year group.
+    var prev = null;
+    Array.prototype.forEach.call(document.getElementById('pub-list').children, function (el) {
+      if (el.hidden) return;
+      if (el.classList.contains('pub')) {
+        el.classList.toggle('no-rule', !prev || !prev.classList.contains('pub') || prev.classList.contains('is-lead'));
+      }
+      prev = el;
+    });
+    buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.filter === topic)); });
+  }
+  buttons.forEach(function (b) { b.addEventListener('click', function () { apply(b.dataset.filter); }); });
+  apply('all');
+
+  // Copy email
+  var btn = document.getElementById('copy-email');
+  var state = document.getElementById('copy-state');
+  var timer;
+  btn.addEventListener('click', function () {
+    var addr = 'haohw@tamu.edu';
+    function done(msg) { state.textContent = msg; clearTimeout(timer); timer = setTimeout(function () { state.textContent = 'copy'; }, 1600); }
+    try {
+      navigator.clipboard.writeText(addr).then(function () { done('copied'); }, function () { done(addr); });
+    } catch (e) { done(addr); }
+  });
+})();
+</script>
+
 </body>
-
 </html>
