@@ -151,6 +151,13 @@ h2 { font-family: var(--display); font-weight: 600; font-size: 24px; letter-spac
 .pub__media:hover video, .pub__media:hover img { transform: scale(1.035); }
 .pub__venue { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 0 0 6px; }
 .venue { font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--accent); }
+.award {
+  font: 600 12px var(--mono); color: #c5221f; background: #fce8e6;
+  border: 1px solid #f6aea9; border-radius: 5px; padding: 1px 7px;
+}
+:root[data-theme="dark"] .award { color: #ff8a80; background: #3a1614; border-color: #6b2622; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .award { color: #ff8a80; background: #3a1614; border-color: #6b2622; } }
+.news .award { padding: 0 6px; }
 .pub h3 { font-family: var(--display); font-weight: 600; font-size: 17px; line-height: 1.32; letter-spacing: -0.01em; margin: 0 0 6px; text-wrap: balance; }
 .pub h3 a { color: var(--fg); }
 .pub h3 a:hover { color: var(--accent); text-decoration: none; }
@@ -257,6 +264,8 @@ footer a { color: var(--muted); }
   <section id="news">
     <div class="section-head"><h2>News</h2></div>
     <ul class="news">
+      <li><time>2026</time><div><a href="https://openlongtail.github.io/">OpenLongTail</a> won the <span class="award">🏆 Best Paper Award</span> at the CoRL 2026 Grounded 4D World Models Workshop.</div></li>
+      <li><time>2026</time><div><a href="https://touch-scale.github.io/">TouchScale</a>, <a href="https://openlongtail.github.io/">OpenLongTail</a> and <a href="https://touchtwin.github.io/">TouchTwin</a> accepted to <span class="badge">CoRL 2026 workshops</span>.</div></li>
       <li><time>2026</time><div>Released <a href="https://touch-scale.github.io/">TouchScale</a>, 500 hours of human vision and touch for visual–tactile learning.</div></li>
       <li><time>2026</time><div><a href="https://adonis-galaxy.github.io/RuleSmith-website/">RuleSmith</a> accepted to <span class="badge">NeurIPS 2026</span>.</div></li>
       <li><time>2026</time><div><a href="https://behavior-uncloning.github.io/">Behavior Uncloning</a> accepted to <span class="badge">CoRL 2026</span>.</div></li>
@@ -305,7 +314,7 @@ footer a { color: var(--muted); }
           <video src="assets/media/touchscale.mp4" poster="assets/media/touchscale.jpg" muted loop playsinline preload="metadata"></video>
         </a>
         <div>
-          <p class="pub__venue"><span class="venue">arXiv 2026</span><span class="arxiv">2610.10288</span></p>
+          <p class="pub__venue"><span class="venue">CoRL 2026 Workshop · Scaling H2R</span><span class="arxiv">2610.10288</span></p>
           <h3><a href="https://arxiv.org/abs/2610.10288">TouchScale: 500 Hours of Human Vision and Touch for Visual–Tactile Learning</a></h3>
           <p class="authors">Dayou Li*, <b>Hao Wang</b>*, Qianqian Yang*, Zihao Zhu*, Haoquan Fang, Ziyao Zeng, Yan Han<span class="authors__more" hidden>, Zihan Wang, Yan Wang, Baoru Huang, Dilin Wang, Kenji Shimada, Yiyue Luo, Manling Li, Teresa Lv, Mustafa Mukadam, Rakesh Ranjan, Ruohan Zhang, Qi He, Changliu Liu, Xu Chen, Marco Pavone, Bangya Liu, Jiachen Li, Masayoshi Tomizuka</span>, <button type="button" class="authors__toggle" aria-expanded="false">+18 authors</button>, Zhiwen Fan</p>
           <p class="tldr">A 500-hour dataset pairing egocentric video with full-hand tactile signals; scaling it raises robot task success from 22.5% to 57.5% and improves zero-shot touch prediction on unseen sensors.</p>
@@ -331,6 +340,56 @@ footer a { color: var(--muted); }
             <li><a href="https://arxiv.org/pdf/2602.06232">paper</a></li>
             <li><a href="https://adonis-galaxy.github.io/RuleSmith-website/">project</a></li>
             <li><a href="https://github.com/Adonis-galaxy/RuleSmith">code</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="pub" data-topic="embodied" data-year="2026">
+        <a class="pub__media" href="https://openlongtail.github.io/" aria-label="OpenLongTail project page">
+          <video src="assets/media/openlongtail.mp4" poster="assets/media/openlongtail.jpg" muted loop playsinline preload="metadata"></video>
+        </a>
+        <div>
+          <p class="pub__venue"><span class="venue">CoRL 2026 Workshop · Grounded 4D World Models</span><span class="award">🏆 Best Paper Award</span></p>
+          <h3><a href="https://arxiv.org/abs/2607.09655">OpenLongTail: Generative Scaling of Long-Tail Driving Data</a></h3>
+          <p class="authors">Lulin Liu*, Nuo Chen*, Yan Wang, Bangya Liu, Wenyan Cong, Hezhen Hu, Boris Ivanovic, <b>Hao Wang</b><span class="authors__more" hidden>, Ziyao Zeng, Xinyu Gong, Yang Zhou, Zixiang Xiong, Dilin Wang, Zhangyang Wang, Weisong Shi, Ruohan Zhang, Marco Pavone</span>, <button type="button" class="authors__toggle" aria-expanded="false">+9 authors</button>, Zhiwen Fan</p>
+          <p class="tldr">An open-source generative data engine that turns long-tail driving videos, even single dash-cam clips, into pose-grounded multi-view data for VLA policy learning.</p>
+          <ul class="plinks">
+            <li><a href="https://arxiv.org/pdf/2607.09655">paper</a></li>
+            <li><a href="https://openlongtail.github.io/">project</a></li>
+            <li><a href="https://github.com/phai-lab/OpenLongTail">code</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="pub" data-topic="embodied" data-year="2026">
+        <a class="pub__media" href="https://touchtwin.github.io/" aria-label="TouchTwin project page">
+          <video src="assets/media/touchtwin.mp4" poster="assets/media/touchtwin.jpg" muted loop playsinline preload="metadata"></video>
+        </a>
+        <div>
+          <p class="pub__venue"><span class="venue">CoRL 2026 Workshop · LBR</span></p>
+          <h3><a href="https://touchtwin.github.io/">TouchTwin: Scaling Human Touch Data via Real-to-Sim-to-Real</a></h3>
+          <p class="authors">Huiwen Han*, Nuo Chen*, Ziyao Zeng*, Dayou Li, <b>Hao Wang</b>, Amir Hossein Rahmati, Xiaoning Qian, Bangya Liu, Zhiwen Fan</p>
+          <p class="tldr">Rebuilds TouchScale glove recordings in simulation with touch-driven contact forces; policies trained on these replays grip at 0.99× the recorded force, versus 0.31× for pose imitation.</p>
+          <ul class="plinks">
+            <li><a href="https://touchtwin.github.io/paper/touchtwin-corl-lbr.pdf">paper</a></li>
+            <li><a href="https://touchtwin.github.io/">project</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="pub" data-topic="llm" data-year="2026">
+        <a class="pub__media" href="https://cyber-arena.ai/" aria-label="CyberArena project page">
+          <video src="assets/media/cyberarena.mp4" poster="assets/media/cyberarena.jpg" muted loop playsinline preload="metadata"></video>
+        </a>
+        <div>
+          <p class="pub__venue"><span class="venue">arXiv 2026</span><span class="arxiv">2610.19005</span></p>
+          <h3><a href="https://arxiv.org/abs/2610.19005">CyberArena: Benchmarking AI Agents in Live Symmetric Attack-and-Defense Combat</a></h3>
+          <p class="authors">Bangya Liu, Jianhong Tu, Yueyang Pan, Hanhong Zhao<span class="authors__more" hidden>, Zhe Ye, Hongwei Li, Saastha Vasan, Katherine Lambert, Junmin Zhu, Hao Wang, Jienan Chen, Yunze Xiao, Minglai Yang, Zihan Wang, Hairong Yin</span>, <button type="button" class="authors__toggle" aria-expanded="false">+11 authors</button>, <b>Hao Wang</b>, Zhiwen Fan, Tianneng Shi, Zhun Wang, Wenbo Guo, Chenguang Wang, Dawn Song</p>
+          <p class="tldr">A live attack-and-defense CTF benchmark: two agents exploit each other's service while patching their own over multiple rounds, with a latent-ability model placing offense, defense and difficulty on one scale.</p>
+          <ul class="plinks">
+            <li><a href="https://arxiv.org/pdf/2610.19005">paper</a></li>
+            <li><a href="https://cyber-arena.ai/">project</a></li>
+            <li><a href="https://github.com/cyber-arena-ai/cyber-arena">code</a></li>
           </ul>
         </div>
       </article>
@@ -483,7 +542,7 @@ footer a { color: var(--muted); }
   <footer class="wrap">
     <div class="visitor-map"><script type='text/javascript' id='mapmyvisitors'
                 src='https://mapmyvisitors.com/map.js?cl=c1c1c1&w=300&t=tt&d=28WvlrOgSpigWfX3RCo2pMGzYCUTtZ250DubBGhVKK8&co=ffffff&cmo=517c5a&cmn=1ca84a&ct=808080'></script></div>
-    <span>Design inspired by <a href="https://jonbarron.info/">Jon Barron</a> · Last updated October 2026</span>
+    <span>Design inspired by <a href="https://jonbarron.info/">Jon Barron</a> · Last updated November 2026</span>
   </footer>
 
 <script>
